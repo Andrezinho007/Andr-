@@ -2,24 +2,24 @@
 
 require_once"../conexao.php";
 
-$nome =      $_POST["nome"];
-$descricao = $_POST["descricao"];
-$preco =     $_POST["preco"];
-$foto = "semfoto.png";
+//Verifica se foi enviado o param id pela URL
+if(isset($_GET['id'])){
+
+$id = $_GET['id'];
 
 //String com o comando SQL oara ser executado do DB
-$sql = "INSERT INTO `produto` (`nome`, `descricao`, `preco`, `foto`) 
-VALUES (?, ?, ?, ?);";
+$sql = "DELETE FROM `produto` WHERE  `idproduto`= ? ; ";
         echo$sql;
 //Prepara o SQL par ser executado no banco de dados
  $comando = $conexao->prepare($sql);
 
  //adicionar od valores nos parâmetros
- $comando->bind_param("ssds",$nome, $descricao,$preco,$foto);
+ $comando->bind_param("i", $id);
 
 //executa o SQL - Comando no Banco de Dados
 $comando->execute();
 
 //abre o arquivo form.php
 //header("Location: fotm.php");
+}
 ?>
