@@ -2,15 +2,20 @@
 
 require_once"../conexao.php";
 
-$nome =      $_POST["nome"];
-$descricao = $_POST["descricao"];
-$preco =     $_POST["preco"];
-$foto = "semfoto.png";
+if(isset($_POST["nome"]) &&
+ isset($_POST["descricao"]) && 
+ isset($_POST["preco"])) {
+
+
+$nome =       $_POST["nome"];
+$descricao =  $_POST["descricao"];
+$preco =      $_POST["preco"];
+$foto =       "semfoto.png";
 
 //String com o comando SQL oara ser executado do DB
 $sql = "INSERT INTO `produto` (`nome`, `descricao`, `preco`, `foto`) 
 VALUES (?, ?, ?, ?);";
-        echo$sql;
+       
 //Prepara o SQL par ser executado no banco de dados
  $comando = $conexao->prepare($sql);
 
@@ -19,7 +24,7 @@ VALUES (?, ?, ?, ?);";
 
 //executa o SQL - Comando no Banco de Dados
 $comando->execute();
-
+}
 //abre o arquivo form.php
-//header("Location: fotm.php");
+header("Location: form.php");
 ?>
