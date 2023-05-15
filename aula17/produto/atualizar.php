@@ -27,7 +27,7 @@ $sql = "UPDATE produto
 $comando->execute();
 }
 //abre o arquivo form.php
-header("Location: form.php");
+header("Location: produtos.php");
 
-CRUD
+
 ?>

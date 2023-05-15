@@ -16,6 +16,9 @@
     <hr>
     <div class="text-end">
         <a href="form.php" class="btn btn-success">Inserir produtos</a>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     </div>
     <table class="table">
   <thead>
@@ -32,14 +35,18 @@
     
     
 
-</thead>
+  </thead>
    <tbody>
+   
    <?php foreach($produtos as $produtos){ ?>
    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $produtos['nome']; ?></th>
+      <td><?php echo $produtos['preco']; ?></td>
+      <td><?php echo $produtos['foto']; ?></td>
+      <td>
+      <a href="excluir.php?id=<?php echo $produtos['idproduto']; ?>" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i>Excluir</a>
+        <a href="form.php?id=<?php echo $produtos['idproduto']; ?>" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Atualizar</a>
+      </td>
     </tr>
     <?php } ?>
  
