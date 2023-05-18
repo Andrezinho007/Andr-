@@ -42,7 +42,8 @@
    <tr>
       <th scope="row"><?php echo $produtos['nome']; ?></th>
       <td><?php echo $produtos['preco']; ?></td>
-      <td><?php echo $produtos['foto']; ?></td>
+      <td><img src="../uploads/<?php echo $produtos['foto']; ?>" 
+       height="30px" alt="" ></td>
       <td>
       <a href="excluir.php?id=<?php echo $produtos['idproduto']; ?>" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i>Excluir</a>
         <a href="form.php?id=<?php echo $produtos['idproduto']; ?>" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i>Atualizar</a>

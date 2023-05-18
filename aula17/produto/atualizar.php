@@ -6,11 +6,13 @@ if(isset($_POST["nome"]) &&
  isset($_POST["descricao"]) && 
  isset($_POST["preco"])) {
 
+require_once"salvar_foto.php";
+
 $id =         $_POST["id"];
 $nome =       $_POST["nome"];
 $descricao =  $_POST["descricao"];
 $preco =      $_POST["preco"];
-$foto =       "semfoto.png";
+$foto =       "$nome_arquivo";
 
 //String com o comando SQL oara ser executado do DB
 $sql = "UPDATE produto 
