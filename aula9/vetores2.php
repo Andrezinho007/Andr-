@@ -1,18 +1,19 @@
-<h2>Vetores com índice textual</h2>
+<h2>Vetor com índice textual</h2>
 <pre>
-         +------+
-    nome |Notebook|
-         +-------+
-    marca |Dell|
-         +-------+
-    preco |5.400|
-         +-------+
+         +---------+
+   nome  |Notebook |
+         +---------+
+   marca |Dell     |
+         +---------+
+   preco |5.400    |
+         +---------+
 </pre>
+
 <?php
     $produto = [
         "nome" => "Notebook",
         "marca" => "Dell",
-        "preco" => "5.499.99"
+        "preco" => 5499.99
     ];
     var_dump($produto);
 
@@ -21,10 +22,12 @@
     echo $produto["marca"] . "<br>";
     echo $produto["preco"] . "<br>";
 
-    // estrutura de repetição especifica
-    // pra percorrer vetores 
+
+    //estrutura de repetição especifica
+    //para percorrer vetores
     foreach($produto as $key => $value){
         echo $value . "</br>";
     }
 
-?>
+    ?>
+

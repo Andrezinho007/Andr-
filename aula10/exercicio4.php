@@ -1,36 +1,48 @@
-<h2>Exercicio4</h2>
-<br>
+<h2>Exercício 1</h2>
+<p>
+    Criar o vetor abaixo, após imprimir seus
+    valores utilizando a estrutura de repetição
+    for.
+
+    <pre>
+                "nome"     "nota1"      "nota2"
+           +------------+------------+------------+
+         0 |Poliana     |7           |9           |
+           +------------+------------+------------+
+         1 |Murilo      |8           |5           |
+           +------------+------------+------------+
+         2 |André       |6           |7           |
+           +------------+------------+------------+
+    </pre>
+</p>
+
 <?php
-$aluno1 = [
+
+$aluno1 = array(
     "nome" => "Poliana",
-    "nota" => 7,
-    "notas" => 9
+    "nota1" => 7,
+    "nota2" => 9
+);
 
-];
-
-$aluno2 = [
+$aluno2 = array(
     "nome" => "Murilo",
-    "nota" => 8,
-    "notas" => 5
+    "nota1" => 8,
+    "nota2" => 5
+);
 
-];
-$aluno3 = [
-    "nome" => "Andre",
-    "nota" => 6,
-    "notas" => 7
+$aluno3 = array(
+    "nome" => "André",
+    "nota1" => 6,
+    "nota2" => 7
+);
 
-];
-$tabela = [
-    $aluno1,
-    $aluno2,
-    $aluno3
-];
+$dados = [$aluno1, $aluno2, $aluno3];
 
-
-    foreach($tabela as $key => $value){
-        echo $value ["nome"] . "</br>" . $value ["nota"] . "</br>" . $value ["notas"] . "</br>";
-       
-
-    }
+foreach($dados as $key =>$value){
+    echo $value["nome"]  . " | ";
+    echo $value["nota1"] . " | ";;
+    echo $value["nota2"] . " <br> ";;
+}
+  
 
 ?>
