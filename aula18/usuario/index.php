@@ -1,7 +1,8 @@
 <?php require_once "consultar_todos.php"; ?>
 <?php require_once "../template/cabecalho.php";  ?>
+<?php require_once "../template/menu.php";  ?>
 
-  <div class="container">
+<div class="container">
         <h1>Usuários</h1>
         <hr>
         <div class="text-end">
@@ -10,7 +11,7 @@
             </a>
         </div>
 
-        <table class="table">
+        <table class="table" id="myTable">
         <thead>
             <tr>
                 <th scope="col">Nome</th>
