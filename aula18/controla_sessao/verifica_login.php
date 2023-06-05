@@ -39,12 +39,12 @@ if($usuario){
 
        //redireciona para produtos
        header("Location:../produto/index.php");
-    }else{
-    echo "Senha incorreta";
+ }else{
+    $erro_login = "Senha incorreta";
     }   
 
-}else{      
-echo "Não existe usuario com o login informado";
+ }else{      
+    $erro_login = "Não existe usuario com o login informado";
     }
 }
 
