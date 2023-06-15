@@ -1,9 +1,7 @@
 <?php
 require_once "../conexao.php";
 
-if(isset($_POST["nome"]) && isset($_POST["cnpj"]) 
-&& isset($_POST["email"]) && isset($_POST["telefone"])
-&& isset($_POST["idfornecedores"]))
+if(isset($_POST["nome"]))
 {
 
 
@@ -11,7 +9,7 @@ if(isset($_POST["nome"]) && isset($_POST["cnpj"])
  $cnpj = $_POST["cnpj"];
  $email = $_POST["email"];
  $telefone = $_POST["telefone"];
- $idfornecedores = $_POST["idfornecedores"];
+ $idfornecedores = $_POST["id"];
  //string com o comendo sql para ser executoado no db
  $sql = "UPDATE fornecedores SET `nome`=?, `cnpj`=?, `email`=?, `telefone`=? WHERE  `idfornecedores`=?;";
  //prepara o slq para ser executado no banco de dados

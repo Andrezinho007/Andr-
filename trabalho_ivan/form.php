@@ -1,4 +1,4 @@
-
+<?php require_once "consultar_por_id.php" ?>
     <h1>Cadastro Tarefas</h1>
     <hr>
     <form action="<?php  echo isset($fornecedor) ? 'atualizar.php' : 'inserir.php' ?>" 

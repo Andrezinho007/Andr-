@@ -45,8 +45,8 @@
               
               </td>
                 <td>
-                  <a href="excluir.php?idfornecedores=<?php echo $fornecedor['idfornecedores']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
-                  <a href="form.php?idfornecedores=<?php echo $fornecedor['idfornecedores']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
+                  <a href="excluir.php?id=<?php echo $fornecedor['idfornecedores']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
+                  <a href="form.php?id=<?php echo $fornecedor['idfornecedores']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
                 </td>
             </tr>
         <?php } ?>
