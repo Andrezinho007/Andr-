@@ -1,5 +1,5 @@
- <?php require_once "../consultar_todos.php"; ?>
-
+ <?php require_once "consultar_todos.php"; ?>
+<?php require_once "../conexao.php"; ?>
  <!doctype html>
 <html lang="en">
   <head>
@@ -35,15 +35,18 @@
         <?php foreach($fornecedores as $fornecedor){ ?>
             <tr>
                 <th scope="row"><?php echo $fornecedor['nome']; ?></th>
+                
                 <td><?php echo $fornecedor['cnpj']; ?></td>
+                
                 <td><?php echo $fornecedor['email']; ?></td>
+               
                 <td><?php echo $fornecedor['telefone']; ?></td>
             
               
               </td>
                 <td>
-                  <a href="excluir.php?id=<?php echo $fornecedor['idfornecedor']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
-                  <a href="form.php?id=<?php echo $fornecedor['idfornecedor']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
+                  <a href="excluir.php?idfornecedores=<?php echo $fornecedor['idfornecedores']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
+                  <a href="form.php?idfornecedores=<?php echo $fornecedor['idfornecedores']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
                 </td>
             </tr>
         <?php } ?>

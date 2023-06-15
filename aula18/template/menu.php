@@ -8,28 +8,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
-    
-       
 
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="../site/index.php">
                Site
             </a>
-          </li>
+        </li>
 
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="../produto/index.php">
-               Produto
+               Produtos
             </a>
-          </li>
+        </li>
 
-          <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="../usuario/index.php">
                Usuários
             </a>
-          </li>
-        
-      
+        </li>
         
       
       </ul>
@@ -41,6 +37,3 @@
   </div>
 </nav>
      <!-- Final do Menu -->
-
-<hr>
-

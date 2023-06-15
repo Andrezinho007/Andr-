@@ -1,6 +1,6 @@
 <?php
-     include_once "../template/cabecalho.php"; 
-    include_once "../produto/consultar_todos.php"; 
+    include_once "../template/cabecalho.php";
+    include_once "../produto/consultar_todos.php";
 ?>
 
 
@@ -22,24 +22,22 @@
               $categorias[] = $value["categoria"];
         ?>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?categoria=<?php  $value["ctegoria"]; ?>">
+            <a class="nav-link" 
+            href="index.php?categoria=<?= $value["categoria"]; ?>">
                <?php echo $value["categoria"]; ?>
             </a>
           </li>
-<?php
-         
-        endif;
-        
-      endforeach;
-?>
 
-          <li class="nav-item">
+        <?php 
+           endif;
+           endforeach; 
+       ?>
+
+        <li class="nav-item">
             <a class="nav-link" href="../produto/index.php">
                Acesso Restrito
             </a>
-          </li>
-        
-      
+        </li>
         
       
       </ul>
@@ -76,4 +74,7 @@
 
 <hr>
 
-<?php require_once "../template/rodape.php";  ?>
+
+<?php
+    include_once "../template/rodape.php";
+?>

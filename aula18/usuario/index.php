@@ -3,7 +3,7 @@
 <?php require_once "../template/cabecalho.php";  ?>
 <?php require_once "../template/menu.php";  ?>
 
-<div class="container">
+  <div class="container">
         <h1>Usuários</h1>
         <hr>
         <div class="text-end">
@@ -18,7 +18,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">Foto</th>
-                <th scope="col" width="20%">Ações</th>
+                <th scope="col" width="25%">Ações</th>
             </tr>
         </thead>
         <tbody>

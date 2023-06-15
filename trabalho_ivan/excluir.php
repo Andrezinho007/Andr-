@@ -4,20 +4,20 @@
 require_once "../conexao.php";
 
 //verifica se foi enviado o param id pela URL
-if(isset($_GET['idfornecedor']))
+if(isset($_GET['idfornecedores']))
 {
 
 //pega o valor do id que foi enviado pela URL
-$id = $_GET['idfornecedor'];
+$id = $_GET['idfornecedores'];
 
 //String com o comando SQL para ser executado no DB
-$sql = "DELETE FROM `fornecedor` WHERE  `idfornecedor`= ? ; ";
+$sql = "DELETE FROM `fornecedores` WHERE  `idfornecedores`= ?; ";
 
 //Prepara o SQL para ser executado no banco de dados
 $comando = $conexao->prepare($sql);
 
 //adiciona os valores nos parâmetros
-$comando->bind_param("i", $idfornecedor);
+$comando->bind_param("i", $id);
 
 //executa o SQL - Comando no Banco de Dados
 $comando->execute();
