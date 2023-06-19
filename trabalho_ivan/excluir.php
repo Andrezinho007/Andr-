@@ -4,11 +4,11 @@
 require_once "../conexao.php";
 
 //verifica se foi enviado o param id pela URL
-if(isset($_GET['idfornecedores']))
+if(isset($_GET['id']))
 {
 
 //pega o valor do id que foi enviado pela URL
-$id = $_GET['idfornecedores'];
+$id = $_GET['id'];
 
 //String com o comando SQL para ser executado no DB
 $sql = "DELETE FROM `fornecedores` WHERE  `idfornecedores`= ?; ";
